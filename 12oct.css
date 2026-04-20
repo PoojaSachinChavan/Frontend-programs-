@@ -1,0 +1,28 @@
+.textData {
+    margin: 0 auto;
+    font-size: 50px;
+    max-width: 1140px;
+    position: relative;
+}
+
+span.coulurFull {
+    color: #873644;
+}
+
+span.borderBottomFirst {
+    border-bottom: 5px solid #873644;
+    width: 305px;
+    display: block;
+    position: absolute;
+    left: 285px;
+}
+
+span.borderBottomSecond {
+    border-bottom: 5px solid #873644;
+    width: 358px;
+    display: block;
+    position: absolute;
+    left: 255px;
+    bottom: -17px;
+    transform: matrix(1, 0, 1, 1, 7, 4);
+}

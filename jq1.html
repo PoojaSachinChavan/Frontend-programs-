@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Demo</title>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .box {
+            background: white;
+            padding: 15px;
+            margin: 15px auto;
+            width: 60%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin: 5px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #box {
+            width: 100px;
+            height: 100px;
+            background: blue;
+            margin: 10px auto;
+            position: relative;
+        }
+
+        #panel {
+            display: none;
+            background: lightgray;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+
+            $("p.clickable").click(function(){
+                alert("Paragraph clicked!");
+            });
+
+            $("#btn").click(function(){
+                $("#text").hide();
+            });
+
+          
+
+            $("#dataHide").click(function(){
+                $(".showHide").hide();
+            });
+
+            $("#dataShow").click(function(){
+                $(".showHide").show();
+            });
+
+            $("#toggleBtn").click(function(){
+                $("#box").toggle();
+            });
+
+            $("#fadeOutBtn").click(function(){
+                $("#box").fadeOut();
+            });
+
+            $("#fadeInBtn").click(function(){
+                $("#box").fadeIn();
+            });
+
+            $("#slideDownBtn").click(function(){
+                $("#panel").slideDown();
+            });
+
+            $("#slideUpBtn").click(function(){
+                $("#panel").slideUp();
+            });
+
+            $("#colorBtn").click(function(){
+                $("#text").css("color","red");
+            });
+
+            $("#addBtn").click(function(){
+                $("#demo").html("New Content Added!");
+            });
+
+            $("#animateBtn").click(function(){
+                $("#box").animate({
+                    left: '200px',
+                    opacity: '0.5',
+                    height: '150px',
+                    width: '150px'
+                });
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+
+<h1>jQuery Demo (Simple CSS)</h1>
+
+<div class="box">
+    <p class="clickable">Click this paragraph</p>
+    <p id="text">This is some text</p>
+    <button id="btn">Hide Text</button>
+</div>
+
+<div class="box">
+    <button id="dataHide">Hide</button>
+    <button id="dataShow">Show</button>
+    <p class="showHide">Show/Hide Paragraph</p>
+</div>
+
+<div class="box">
+    <button id="toggleBtn">Toggle</button>
+    <button id="fadeOutBtn">Fade Out</button>
+    <button id="fadeInBtn">Fade In</button>
+    <div id="box"></div>
+</div>
+
+<div class="box">
+    <button id="slideDownBtn">Slide Down</button>
+    <button id="slideUpBtn">Slide Up</button>
+    <div id="panel">Sliding Panel</div>
+</div>
+
+<div class="box">
+    <button id="colorBtn">Change Text Color</button>
+</div>
+
+<div class="box">
+    <p id="demo">Original Content</p>
+    <button id="addBtn">Add Content</button>
+</div>
+
+<div class="box">
+    <button id="animateBtn">Animate Box</button>
+</div>
+
+</body>
+</html>

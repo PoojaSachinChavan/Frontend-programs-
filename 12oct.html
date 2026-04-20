@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/12oct.css">
+    <script src="js/basic.js" ></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <style>
+        .hide{
+            display: none;
+        }
+        </style>
+        <script>
+            $(document).ready(function(){
+                $(".clickArea").click(function(){
+                    $(".hidenArea").show();
+                });
+                $(".hidenArea").click(function(){
+                    $(".hidenArea").hide();
+                });
+                $("button").click(function(){
+                $("#box").animate({height: "300px"});
+                });
+            });
+          
+        </script>
+</head>
+<body>
+    <div class="clickArea">
+        <button class="btn btn-primary">Click here to show</button>
+
+    </div>
+
+    <div class="hidenArea">
+        <button class="btn btn-primary">Click here to hide</button>
+    </div>
+    
+    <div class="textData">
+        your Resume
+         <span class="coulurFull">Deserves A Yes</span>
+         <span class="borderBottomFirst"></span>
+         <span class="borderBottomSecond"></span>
+          Lets Make it Happens
+    </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple jQuery Demo</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        #box {
+            width: 150px;
+            height: 150px;
+            background: blue;
+            margin: 20px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="box"></div>
+
+<button onclick="hideBox()">Hide</button>
+<button onclick="showBox()">Show</button>
+<button onclick="toggleBox()">Toggle</button>
+
+<button onclick="fadeInBox()">Fade In</button>
+<button onclick="fadeOutBox()">Fade Out</button>
+
+<button onclick="slideUpBox()">Slide Up</button>
+<button onclick="slideDownBox()">Slide Down</button>
+
+<button onclick="animateBox()">Animate</button>
+<button onclick="stopBox()">Stop</button>
+
+<script>
+
+function hideBox(){
+    $("#box").hide();
+}
+
+function showBox(){
+    $("#box").show();
+}
+
+function toggleBox(){
+    $("#box").toggle();
+}
+
+function fadeInBox(){
+    $("#box").fadeIn();
+}
+
+function fadeOutBox(){
+    $("#box").fadeOut();
+}
+
+function slideUpBox(){
+    $("#box").slideUp();
+}
+
+function slideDownBox(){
+    $("#box").slideDown();
+}
+
+function animateBox(){
+    $("#box").animate({width:"250px", height:"250px"});
+}
+
+function stopBox(){
+    $("#box").stop();
+}
+$("button").click(function(){
+  $("p").hide("slow", function(){
+    alert("The paragraph is now hidden");
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+.btn-lightProper{color: #67a2eb;
+    background: none;
+    border: none;}
+    .no-Padding{padding: 0px !important;}
+    span.badge.badge-light.position-absolute {
+    background: red;
+    color: #fff;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 11px;
+    left: 8px;
+    top: -4px;
+}
+.m-color{
+    color: #3B71CA;
+    font-weight: bold;
+}
+.b-color{
+    color: #9C27B0;
+    font-weight: bold;
+}

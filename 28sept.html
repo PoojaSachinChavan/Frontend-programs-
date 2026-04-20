@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Example</title>
+  <script src="js\jquery-3.6.0.min.js"></script>
+  <style>
+    #box {
+      width: 200px;
+      height: 200px;
+      background: lightblue;
+      margin: 20px auto;
+      text-align: center;
+      line-height: 200px;
+      font-weight: bold;
+      border-radius: 10px;
+    }
+    button {
+      margin: 5px;
+      padding: 10px 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 style="text-align:center;">jQuery 5 Functionalities Demo</h2>
+  
+  <div id="box">Hello Box</div>
+  
+  <div style="text-align:center;">
+    <button id="btnShow">Show</button>
+    <button id="btnHide">Hide</button>
+    <button id="btnToggle">Toggle</button>
+    <button id="btnFade">Fade</button>
+    <button id="btnSlide">Slide</button>
+  </div>
+
+  <script>
+    //Jquery is library of JavaScript
+    // $ is alias of jQuery
+    // jQuery is case sensitive
+    // jQuery syntax: $(selector).action()
+    // selector: to find HTML element
+    // action: to be performed on element   
+    // $(document).ready() is used to make sure the DOM is fully loaded before executing jQuery code
+    // It ensures that the jQuery code runs only after the entire HTML document has been loaded and parsed
+    // This prevents errors that may occur if the jQuery code tries to access elements that are not yet available in the DOM
+    //DOM: Document Object Model
+    //jquery is lightweight and fast
+    //jquery is cross-browser compatible
+    //jquery simplifies JavaScript programming
+    //jquery is open-source and free to use
+    $(document).ready(function(){//syntax for jQuery
+
+      // 1. Show
+      $("#btnShow").click(function(){
+        $("#box").show();//inbuilt Jquery function
+      });
+
+      // 2. Hide
+      $("#btnHide").click(function(){
+        $("#box").hide();//inbuilt Jquery function
+      });
+
+      // 3. Toggle
+      $("#btnToggle").click(function(){
+        $("#box").toggle();//inbuilt Jquery function
+      });
+
+      // 4. Fade effect
+      $("#btnFade").click(function(){
+        $("#box").fadeToggle();//inbuilt Jquery function
+      });
+
+      // 5. Slide effect
+      $("#btnSlide").click(function(){
+        $("#box").slideToggle();//inbuilt Jquery function
+      });
+
+      // Extra: Hover effect
+      $("#box").hover(
+        function(){ $(this).css("background","orange"); },
+        function(){ $(this).css("background","lightblue"); }
+      );
+
+    });
+  </script>
+
+</body>
+</html>
